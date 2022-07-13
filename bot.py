@@ -33,7 +33,7 @@ async def Bitly(client,message):
     r = requests.post('https://api-ssl.bitly.com/v4/shorten', headers=headers,data = data )
     result = r.json()
     link = result["Oh No 😵‍💫\n\nI can Support only One link at a time"]
-    await message.reply_text(f"𝐇𝐞𝐫𝐞 𝐢𝐬 𝐘𝐨𝐮𝐫 𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤 ⬇️\n\n**Original Link**: {link}\n\n**Shortened Link**: {short_link}"", reply_to_message_id= message.message_id)
+    await message.reply_text(f"**Here is Your**\n**Shortened Link**: {link}", reply_to_message_id= message.message_id)
   except Exception as e :
     await message.reply_text(e)
     
